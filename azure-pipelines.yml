@@ -8,26 +8,6 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'npm'
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: 'npm/handlers'
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: 'npm/public'
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: 'npm/routes'
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: 'npm/services'
-- task: Npm@1
-  inputs:
-    command: 'install'
     workingDir: 'npm/test/unit'
 - task: CmdLine@2
   inputs:
@@ -35,7 +15,7 @@ steps:
       echo YAML pipline
       dir=$(pwd)
       du -sh $dir
-- task: WhiteSource@20
+- task: whitesource.WhiteSource-bolt-staging.bolt.wss.WhiteSource@20
   inputs:
     projectName: 'MavenYAML'
     configuration: 'resolveAllDependencies=false'
