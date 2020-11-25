@@ -5,27 +5,27 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Npm@1
+- task: Npm1@1
   inputs:
     command: 'install'
     workingDir: 'npm'
-- task: Npm@1
+- task: Npm2@1
   inputs:
     command: 'install'
     workingDir: 'npm/handlers'
-- task: Npm@1
+- task: Npm3@1
   inputs:
     command: 'install'
     workingDir: 'npm/public'
-- task: Npm@1
+- task: Npm4@1
   inputs:
     command: 'install'
     workingDir: 'npm/routes'
-- task: Npm@1
+- task: Npm5@1
   inputs:
     command: 'install'
-    workingDir: 'npm/service'
-- task: Npm@1
+    workingDir: 'npm/services'
+- task: Npm6@1
   inputs:
     command: 'install'
     workingDir: 'npm/test/unit'
