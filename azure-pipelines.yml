@@ -5,6 +5,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'npm'
 - task: WhiteSource@20
   inputs:
     projectName: 'MavenYAML'
