@@ -38,3 +38,4 @@ steps:
 - task: WhiteSource@20
   inputs:
     projectName: 'MavenYAML'
+    configuration: 'resolveAllDependencies=false'
