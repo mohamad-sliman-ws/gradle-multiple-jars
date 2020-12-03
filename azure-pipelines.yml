@@ -15,7 +15,5 @@ steps:
       echo YAML pipline
       dir=$(pwd)
       du -sh $dir
-- task: whitesource.WhiteSource-bolt-staging.bolt.wss.WhiteSource@20
+- task: WhiteSource@20
   inputs:
-    projectName: 'MavenYAML'
-    configuration: 'resolveAllDependencies=false'
