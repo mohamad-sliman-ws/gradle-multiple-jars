@@ -16,18 +16,32 @@ steps:
   inputs:
     command: 'install'
     workingDir: 'npm/handlers'
-
+    displayName: '1 npm install'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'npm/public'
+    displayName: '2 npm instal'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'npm/routes'
+    displayName: '3 npm instal'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'npm/services'
+    displayName: '4 npm install'
 - task: Npm@1
   inputs:
     command: 'install'
     workingDir: 'npm/test/unit'
-    displayName: 'npm instal /unit'
+    displayName: '5 npm instal'
+- task: CmdLine@2
+  inputs:
+    script: |
+      dir=$(pwd)
+        du -sh $dir
 - task: WhiteSource@20
   inputs:
-    cwd: 'npm/handlers'
-    projectName: 'scan npm/handlers dir'
-    
-- task: WhiteSource@20
-  inputs:
-    cwd: 'npm/test/unit'
-    projectName: 'scan npm/test/unit dir'
+    projectName: 'scan Big Project'
