@@ -12,7 +12,10 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: 'npm/handlers'
 - task: WhiteSource@20
   inputs:
     cwd: 'npm/handlers'
