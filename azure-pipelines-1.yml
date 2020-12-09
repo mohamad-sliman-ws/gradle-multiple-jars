@@ -44,4 +44,4 @@ steps:
         du -sh $dir
 - task: WhiteSource@20
   inputs:
-    projectName: 'scan Big Project'
+    projectName: 'Scan Big Project'
