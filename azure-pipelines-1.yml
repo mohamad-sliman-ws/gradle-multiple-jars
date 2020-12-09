@@ -15,5 +15,5 @@ steps:
 
 - task: WhiteSource@20
   inputs:
-    cwd: '\npm\handlers'
-    projectName: 'scan /npm/handlers dir'
+    cwd: 'npm/handlers'
+    projectName: 'scan npm/handlers dir'
